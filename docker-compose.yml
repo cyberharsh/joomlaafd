@@ -2,5 +2,6 @@ version: '2'
 services:
  web:
    image: vaday/joomla:47216
+   command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
    ports:
     - "80:80"
